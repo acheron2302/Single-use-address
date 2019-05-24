@@ -9,6 +9,9 @@ from ethereum.exceptions import InvalidTransaction
 class Transaction(rlp.Serializable):
     '''
     Base for transaction
+    @Object txSigned: return the raw transaction
+    @Object txData: return the signing data
+    @Object senderAddress: return the address of the sender
     '''
     def __init__(self, _nonce, _gasPrice, _gasLimit, _to, _value, _init, _v, _r, _s):
         self.nonce = _nonce
